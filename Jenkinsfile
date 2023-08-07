@@ -6,10 +6,5 @@ pipeline {
              sh(script:"echo ${GIT_BRANCH}")
          }
       }
-      stage('Verify Branch in Windows env'){
-         steps {
-            pwsh(script: 'Write-Output "Hello World"')
-         }
-      }
    }
 }
