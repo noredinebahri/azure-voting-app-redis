@@ -1,14 +1,14 @@
 pipeline {
    agent any
    stages{
-      stage('Verify Branch in my perso') {
+      stage('Verify Branch in Linux env') {
          steps {
              sh(script:"echo ${GIT_BRANCH}")
          }
       }
-      stage('get all information about env git'){
+      stage('Verify Branch in Windows env'){
          steps {
-            echo "git env: ${env}"
+            pwsh(script: 'Write-Output "Hello World"')
          }
       }
    }
