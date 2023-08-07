@@ -3,7 +3,7 @@ pipeline {
    stages{
       stage('Verify Branch in my perso') {
          steps {
-            echo $GIT_BRANCH
+             echo "Git Branch: ${env.GIT_BRANCH}"
          }
       }
    }
